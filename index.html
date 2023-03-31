@@ -13,23 +13,9 @@
 		}
 	</style>
 	<script>
-		document.write("Made by Advik | Bozo Corporation. If the game does not load, please use a proxy.<br>");
-		setTimeout(function() {
-			var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-			var targetUrl = 'https://now.gg/play/roblox-corporation/5349/roblox/';
-			fetch(proxyUrl + targetUrl)
-				.then(function(response) {
-					return response.text();
-				})
-				.then(function(html) {
-					var iframe = document.createElement('iframe');
-					iframe.srcdoc = html;
-					iframe.style = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;';
-					document.body.appendChild(iframe);
-				})
-				.catch(function() {
-					console.log('Could not load game. Please use a proxy.');
-				});
+		document.write("Made by Advik | Bozo Corporation. If the game does not load, please use a proxy.");
+		setTimeout(function(){
+			document.getElementsByTagName('iframe')[0].src = "https://now.gg/play/roblox-corporation/5349/roblox/";
 		}, 1000);
 	</script>
 </head>
